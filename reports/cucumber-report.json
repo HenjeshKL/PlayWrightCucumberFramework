@@ -1,0 +1,137 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "ecommerce-validations;placing-the-order",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "placing the order",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1087440417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "login to Ecommerce2 application with \"sachinten@gmail.com\" and \"Iamhero@0000\"",
+            "match": {
+              "location": "features/step_definitions/steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3566573375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "verify error message is displayed",
+            "match": {
+              "location": "features/step_definitions/steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2309542415
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 137313541
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Validations",
+            "line": 2
+          },
+          {
+            "name": "@foo",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "ecommerce-validations;placing-the-order",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "placing the order",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 515823625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "login to Ecommerce2 application with \"hello@123.com\" and \"Iamhello@12\"",
+            "match": {
+              "location": "features/step_definitions/steps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1894580249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "verify error message is displayed",
+            "match": {
+              "location": "features/step_definitions/steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2302609540
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 142144624
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Validations",
+            "line": 2
+          },
+          {
+            "name": "@foo",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "ecommerce-validations",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Ecommerce validations",
+    "tags": [],
+    "uri": "features/ErrorValidations.feature"
+  }
+]
