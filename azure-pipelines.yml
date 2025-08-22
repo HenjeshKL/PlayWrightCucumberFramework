@@ -1,0 +1,42 @@
+trigger:
+- none   # adjust branch name if needed
+
+pool:
+  name: Default
+  demands:
+    - agent.name -equals playwright-agent
+
+steps:
+# Step 1: Use Node.js
+- task: UseNode@1
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Use Node.js'
+
+# Step 2: Install dependencies
+- script: |
+    npm ci
+  displayName: 'Install dependencies'
+
+# Step 3: Install Playwright browsers
+- script: |
+    npx playwright install --with-deps
+  displayName: 'Install Playwright Browsers'
+
+# Step 4A: Run Regression suite
+- script: |
+    npm run cucumber-regression
+  displayName: 'Run Regression Tests'
+
+# Step 4B: Run Validations suite
+- script: |
+    npm run cucumber-validations
+  displayName: 'Run Validations Tests'
+
+# Step 5: Publish reports (if generated in /reports folder)
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: 'reports'
+    artifactName: 'cucumber-reports'
+    publishLocation: 'Container'
+  displayName: 'Publish Cucumber Reports'
