@@ -13,27 +13,33 @@ steps:
     versionSpec: '18.x'
   displayName: 'Use Node.js'
 
-# Step 2: Install dependencies
+# Step 2: Clean workspace to avoid corrupted node_modules
+- script: |
+    rm -rf node_modules package-lock.json
+    npm cache clean --force
+  displayName: 'Clean workspace'
+
+# Step 3: Install dependencies
 - script: |
     npm ci
   displayName: 'Install dependencies'
 
-# Step 3: Install Playwright browsers
+# Step 4: Install Playwright browsers
 - script: |
     npx playwright install --with-deps
   displayName: 'Install Playwright Browsers'
 
-# Step 4A: Run Regression suite
+# Step 5A: Run Regression suite
 - script: |
     npm run cucumber-regression
   displayName: 'Run Regression Tests'
 
-# Step 4B: Run Validations suite
+# Step 5B: Run Validations suite
 - script: |
     npm run cucumber-validations
   displayName: 'Run Validations Tests'
 
-# Step 5: Publish reports (if generated in /reports folder)
+# Step 6: Publish reports (if generated in /reports folder)
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: 'reports'
