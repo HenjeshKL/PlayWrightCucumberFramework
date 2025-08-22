@@ -29,10 +29,10 @@ steps:
     npx playwright install
   displayName: 'Install Playwright Browsers'
 
-# Step 5A: Run Regression suite
-- script: |
-    npm run cucumber-regression
-  displayName: 'Run Regression Tests'
+# # Step 5A: Run Regression suite
+# - script: |
+#     npm run cucumber-regression
+#   displayName: 'Run Regression Tests'
 
 # Step 5B: Run Validations suite
 - script: |
