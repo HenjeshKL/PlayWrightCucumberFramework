@@ -7,21 +7,21 @@ pool:
     - agent.name -equals playwright-agent
 
 steps:
-# Step 1: Use Node.js
+# Step 1: Use Node.js 18
 - task: UseNode@1
   inputs:
     versionSpec: '18.x'
-  displayName: 'Use Node.js'
+  displayName: 'Use Node.js 18'
 
-# Step 2: Clean workspace to avoid corrupted node_modules
+# Step 2: Clean workspace (only node_modules, keep package-lock.json)
 - script: |
-    rm -rf node_modules package-lock.json
+    rm -rf node_modules
     npm cache clean --force
   displayName: 'Clean workspace'
 
-# Step 3: Install dependencies
+# Step 3: Install dependencies using lockfile
 - script: |
-    npm ci
+    npm ci || npm install
   displayName: 'Install dependencies'
 
 # Step 4: Install Playwright browsers
