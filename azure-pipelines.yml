@@ -8,10 +8,10 @@ pool:
 
 steps:
 # Step 1: Use Node.js 18
-- task: UseNode@1
+- task: NodeTool@0
+  displayName: 'Use Node.js 18'
   inputs:
     versionSpec: '18.x'
-  displayName: 'Use Node.js 18'
 
 # Step 2: Clean workspace (only node_modules, keep package-lock.json)
 - script: |
@@ -26,7 +26,7 @@ steps:
 
 # Step 4: Install Playwright browsers
 - script: |
-    npx playwright install --with-deps
+    npx playwright install
   displayName: 'Install Playwright Browsers'
 
 # Step 5A: Run Regression suite
