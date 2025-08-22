@@ -36,7 +36,7 @@ steps:
 
 # Step 5B: Run Validations suite
 - script: |
-    npm run cucumber-validations
+    npm run cucumber-Validations
   displayName: 'Run Validations Tests'
 
 # Step 6: Publish reports (if generated in /reports folder)
