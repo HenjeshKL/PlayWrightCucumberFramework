@@ -6,7 +6,7 @@
         "description": "",
         "id": "ecommerce-validations;placing-the-order",
         "keyword": "Scenario",
-        "line": 10,
+        "line": 12,
         "name": "placing the order",
         "steps": [
           {
@@ -14,33 +14,72 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1087440417
+              "duration": 1672077417
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "login to Ecommerce2 application with \"sachinten@gmail.com\" and \"Iamhero@0000\"",
+            "line": 4,
+            "name": "login to Ecommerce application with \"sachinten@gmail.com\" and \"Iamhero@0000\"",
             "match": {
-              "location": "features/step_definitions/steps.js:48"
+              "location": "features/step_definitions/steps.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 3566573375
+              "duration": 4854239416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "ADD \"ZARA COAT 3\" to cart",
+            "match": {
+              "location": "features/step_definitions/steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1559023709
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "verify error message is displayed",
+            "name": "verify \"ZARA COAT 3\" is displayed in a cart",
             "match": {
-              "location": "features/step_definitions/steps.js:60"
+              "location": "features/step_definitions/steps.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 2309542415
+              "duration": 62522917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Enter valid details and Place the order",
+            "match": {
+              "location": "features/step_definitions/steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2039864500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "verify order is present in the OrderHistory",
+            "match": {
+              "location": "features/step_definitions/steps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151297124
             }
           },
           {
@@ -48,18 +87,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 137313541
+              "duration": 241151874
             }
           }
         ],
         "tags": [
           {
-            "name": "@Validations",
+            "name": "@Regression",
             "line": 2
-          },
-          {
-            "name": "@foo",
-            "line": 3
           }
         ],
         "type": "scenario"
@@ -68,7 +103,7 @@
         "description": "",
         "id": "ecommerce-validations;placing-the-order",
         "keyword": "Scenario",
-        "line": 11,
+        "line": 13,
         "name": "placing the order",
         "steps": [
           {
@@ -76,33 +111,72 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 515823625
+              "duration": 397946458
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "login to Ecommerce2 application with \"hello@123.com\" and \"Iamhello@12\"",
+            "line": 4,
+            "name": "login to Ecommerce application with \"dash@123.com\" and \"Iamhello@12\"",
             "match": {
-              "location": "features/step_definitions/steps.js:48"
+              "location": "features/step_definitions/steps.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1894580249
+              "duration": 4541349916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "ADD \"ADIDAS ORIGINAL\" to cart",
+            "match": {
+              "location": "features/step_definitions/steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1580682834
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "verify error message is displayed",
+            "name": "verify \"ADIDAS ORIGINAL\" is displayed in a cart",
             "match": {
-              "location": "features/step_definitions/steps.js:60"
+              "location": "features/step_definitions/steps.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 2302609540
+              "duration": 75316624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Enter valid details and Place the order",
+            "match": {
+              "location": "features/step_definitions/steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1275517792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "verify order is present in the OrderHistory",
+            "match": {
+              "location": "features/step_definitions/steps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 327915916
             }
           },
           {
@@ -110,18 +184,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 142144624
+              "duration": 113501040
             }
           }
         ],
         "tags": [
           {
-            "name": "@Validations",
+            "name": "@Regression",
             "line": 2
-          },
-          {
-            "name": "@foo",
-            "line": 3
           }
         ],
         "type": "scenario"
@@ -132,6 +202,6 @@
     "keyword": "Feature",
     "name": "Ecommerce validations",
     "tags": [],
-    "uri": "features/ErrorValidations.feature"
+    "uri": "features/Ecommerce.feature"
   }
 ]
